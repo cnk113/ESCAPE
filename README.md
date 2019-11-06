@@ -1,8 +1,21 @@
+![flowchart](flow.png)
+
+# Removal of ambient RNA and empty droplets
+CellBender (https://github.com/broadinstitute/CellBender)
+
+# Doublet removal
+Scrublet
+
+DoubletFinder
+
+DoubletDetection
+
+DoubletDecon
+
+# Imputation
 DrImpute (https://github.com/ikwak2/DrImpute)
 
 Rmagic (https://github.com/KrishnaswamyLab/MAGIC)
-
-rsvd (https://cran.r-project.org/web/packages/rsvd/index.html)
 
 SAVER (https://github.com/mohuangx/SAVER)
 
@@ -12,7 +25,33 @@ scImpute (https://github.com/Vivianstats/scImpute)
 
 scRMD (https://github.com/ChongC1990/scRMD)
 
-stats (https://stat.ethz.ch/R-manual/R-devel/library/stats/html/stats-package.html)
+DeepImpute
+
+scNPF
+
+I-Impute
+
+netNMF-sc
+
+BISCUIT
+
+Rescue
+
+bayNorm
+
+scRecover
+
+SCRIBE
+
+scDoc
+
+AutoImpute
+
+SCRABBLE
+
+scTSSR
+
+scScope
 
 dca (https://github.com/theislab/dca) 
 
