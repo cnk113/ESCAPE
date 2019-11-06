@@ -1,0 +1,15 @@
+Package: scDoc
+Title: Single-cell RNA-seq Drop-out Correction
+Version: 0.0.0.9
+Date: 2018-12-28
+Authors@R: person("Di", "Ran", email = "diran@email.arizona.edu", role = c("aut", "cre"))
+Description: Identify drop-out values in single-cell RNA-seq data (raw count or TPM) via mixture model (Poisson-NB or Gamma-Normal for count and TPM respectively) and impute drop-out by borrowing information from the most similar cells (detected using weighted Cosine similarity).
+Depends: R (>= 3.0.0), MASS, foreach, doParallel
+License: GPL
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2018-12-28 22:41:37 UTC; dran
+Author: Di Ran [aut, cre]
+Maintainer: Di Ran <diran@email.arizona.edu>

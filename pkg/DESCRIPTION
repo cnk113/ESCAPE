@@ -1,0 +1,19 @@
+Package: scep
+Type: Package
+Title: Ensemble pipeline for scRNA-seq data to remove ambient RNA, empty droplets, doublets, and imputation.
+Version: 1.0
+Author: Chang Kim
+Maintainer: Chang Kim <chang.kim@ucsf.edu>
+Description: scep 
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Depends: R (>= 3.6)
+Imports: DrImpute, Rmagic, rsvd, SAVER, scImpute, stats, scRMD, abind, future.apply, Seurat,
+NeedsCompilation: no
+Packaged: 2019-11-05 10:28:54 UTC; Chang
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
