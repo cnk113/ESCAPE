@@ -1,4 +1,4 @@
-Package: scep
+Package: ESCAPE
 Type: Package
 Title: Ensemble pipeline for scRNA-seq data to remove ambient RNA, empty droplets, doublets, and imputation.
 Version: 1.0
