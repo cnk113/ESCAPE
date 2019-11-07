@@ -16,7 +16,7 @@ CellBender = function(h5, cells, total, calls, dim=200, layers=1000, epochs=300)
 # Run doublet removals tools
 preprocess = function(h5, exp.cells, total.cells, cell.calls, z.dim, z.layers, epochs){
   count <- CellBender(h5, cells=exp.cells, total=total.cells, calls=cell.calls, dim=z.dim, layers=z.layers, epochs=epochs)
-  source('doubletdetect.py')
+  source('doubletdetection.py')
   pred = doubletdetect(count, exp.cells, cell.calls)
   DoubletDecon(count)
   DoubletFinder(count, prop)

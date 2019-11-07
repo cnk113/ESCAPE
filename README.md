@@ -46,7 +46,7 @@ devtools::install_github("cnk113/scep", subdir="pkg")
 
 [bayNorm](https://github.com/WT215/bayNorm)
 
-[scRecover](https://github.com/miaozhun/scRecover)
+[scRecover](https://github.com/cnk113/scRecover)
 
 [SCRIBE](https://github.com/YiliangTracyZhang/SCRIBE)
 
