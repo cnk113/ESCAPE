@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556114525670.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DCCC3A53",
+    "lastKnownWriteTime" : 1556115197,
+    "last_content_update" : 1556115197799,
+    "path" : "/data/public/adesous1/gitreps/ADImpute/R/Impute.R",
+    "project_path" : "R/Impute.R",
+    "properties" : {
+        "cursorPosition" : "170,76",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "166"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

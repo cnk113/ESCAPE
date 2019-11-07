@@ -34,11 +34,15 @@ devtools::install_github("cnk113/scep", subdir="pkg")
 
 [scLINE](https://github.com/BMILAB/scLINE)
 
+[BUSseq](https://github.com/songfd2018/BUSseq-1.0)
+
 [scNPF](https://github.com/BMILAB/scnpf)
 
 [I-Impute](https://github.com/xikanfeng2/I-Impute)
 
 [netNMF-sc](https://github.com/raphael-group/netNMF-sc)
+
+[ENHANCE](https://github.com/yanailab/enhance-R)
 
 [BISCUIT](https://github.com/sandhya212/BISCUIT_SingleCell_IMM_ICML_2016)
 
@@ -59,6 +63,8 @@ devtools::install_github("cnk113/scep", subdir="pkg")
 [scTSSR](https://github.com/Zhangxf-ccnu/scTSSR)
 
 [scScope](https://github.com/AltschulerWu-Lab/scScope)
+
+[ADImpute](http://cellnet-sb.cecad.uni-koeln.de/resources/adaptive-dropout-imputer-adimpute/)
 
 [VIPER](https://github.com/ChenMengjie/VIPER)
 

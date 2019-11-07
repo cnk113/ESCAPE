@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556115991389.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "27EA2EED",
+    "lastKnownWriteTime" : 1556116019,
+    "last_content_update" : 1556116032660,
+    "path" : "/data/public/adesous1/gitreps/ADImpute/R/NetworkFunctions.R",
+    "project_path" : "R/NetworkFunctions.R",
+    "properties" : {
+        "cursorPosition" : "17,26",
+        "docOutlineVisible" : "1",
+        "scrollLine" : "4"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
