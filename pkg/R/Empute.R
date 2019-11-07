@@ -370,9 +370,7 @@ scRMD.EnImpute = function(count, tau = NULL, lambda = NULL, candidate = 0.05){
 #' [9] Zhang, X. F. et al. EnImpute: imputing dropout events in single cell RNA sequencing data via ensemble learning, 2019.\cr
 #'
 
-Empute = function(h5, exp.cells, total.drops, z.dim=200, z.layers=1000, ep=300,
-                  exp.cells=0.1, exp.calls = NULL,
-                  scale.factor = 10000, trim = 0.3,
+Empute = function(count, scale.factor = 10000, trim = 0.3,
                   ALRA = TRUE, DCA = TRUE, DrImpute = TRUE, MAGIC = TRUE, SAVER = TRUE,
                   scImpute = TRUE, scRMD = TRUE, ALRA.k = 0, ALRA.q = 10, ALRA.mkl = TRUE,
                   DCA.normtype = "zheng", DCA.type = "zinb-conddisp",
@@ -397,10 +395,6 @@ Empute = function(h5, exp.cells, total.drops, z.dim=200, z.layers=1000, ep=300,
   Methods.used = Methods[Methods.idx]
 
   K = length(Methods.used)
-
-  count <- Cellbender(h5, cells=exp.cells, total=total.drops, dim=z.dim, layers=z.layers, epochs=ep)
-  count <- Doublets(count, exp=exp.cells, cell.calls=calls)
-
 
   p = dim(count)[1]
   n = dim(count)[2]

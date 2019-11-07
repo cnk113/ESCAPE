@@ -1,60 +1,67 @@
 ![flowchart](flow.png)
-
+# Installation
+```
+devtools::install_github("cnk113/scep", subdir="pkg")
+```
 # Removal of ambient RNA and empty droplets
-CellBender (https://github.com/broadinstitute/CellBender)
+[CellBender](https://github.com/broadinstitute/CellBender)
 
 # Doublet removal
-Scrublet
+[Scrublet](https://github.com/swolock/scrublet)
 
-DoubletFinder
+[DoubletFinder](https://github.com/chris-mcginnis-ucsf/DoubletFinder)
 
-DoubletDetection
+[DoubletDetection](https://github.com/JonathanShor/DoubletDetection)
 
-DoubletDecon
+[DoubletDecon](https://github.com/EDePasquale/DoubletDecon)
 
 # Imputation
-DrImpute (https://github.com/ikwak2/DrImpute)
+[DrImpute](https://github.com/ikwak2/DrImpute)
 
-Rmagic (https://github.com/KrishnaswamyLab/MAGIC)
+[Rmagic](https://github.com/KrishnaswamyLab/MAGIC)
 
-SAVER (https://github.com/mohuangx/SAVER)
+[SAVER](https://github.com/mohuangx/SAVER)
 
-Seurat (https://cran.r-project.org/web/packages/Seurat/index.html)
+[scImpute](https://github.com/Vivianstats/scImpute)
 
-scImpute (https://github.com/Vivianstats/scImpute)
+[scRMD](https://github.com/ChongC1990/scRMD)
 
-scRMD (https://github.com/ChongC1990/scRMD)
+[DeepImpute](https://github.com/lanagarmire/deepimpute)
 
-DeepImpute
+[scHinter](https://github.com/BMILAB/scHinter)
 
-scNPF
+[netSmooth](https://github.com/BIMSBbioinfo/netSmooth)
 
-I-Impute
+[scLINE](https://github.com/BMILAB/scLINE)
 
-netNMF-sc
+[scNPF](https://github.com/BMILAB/scnpf)
 
-BISCUIT
+[I-Impute](https://github.com/xikanfeng2/I-Impute)
 
-Rescue
+[netNMF-sc](https://github.com/raphael-group/netNMF-sc)
 
-bayNorm
+[BISCUIT](https://github.com/sandhya212/BISCUIT_SingleCell_IMM_ICML_2016)
 
-scRecover
+[RESCUE](https://github.com/seasamgo/rescue)
 
-SCRIBE
+[bayNorm](https://github.com/WT215/bayNorm)
 
-scDoc
+[scRecover](https://github.com/miaozhun/scRecover)
 
-AutoImpute
+[SCRIBE](https://github.com/YiliangTracyZhang/SCRIBE)
 
-SCRABBLE
+[scDoc](https://github.com/anlingUA/scDoc)
 
-scTSSR
+[AutoImpute](https://github.com/divyanshu-talwar/AutoImpute)
 
-scScope
+[SCRABBLE](https://github.com/software-github/SCRABBLE)
 
-dca (https://github.com/theislab/dca) 
+[scTSSR](https://github.com/Zhangxf-ccnu/scTSSR)
 
-MAGIC (https://github.com/KrishnaswamyLab/MAGIC)
+[scScope](https://github.com/AltschulerWu-Lab/scScope)
 
-devtools::install_github("cnk113/scep", subdir="pkg")
+[VIPER](https://github.com/ChenMengjie/VIPER)
+
+[DCA](https://github.com/theislab/dca) 
+
+[MAGIC](https://github.com/KrishnaswamyLab/MAGIC)
