@@ -1,10 +1,12 @@
 ![flowchart](flow.png)
 # Installation
 ```
-devtools::install_github("cnk113/scep", subdir="pkg")
+devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 ```
 # Removal of ambient RNA and empty droplets
 [CellBender](https://github.com/broadinstitute/CellBender)
+
+[CB2](https://github.com/zijianni/scCB2)
 
 # Doublet removal
 [Scrublet](https://github.com/swolock/scrublet)

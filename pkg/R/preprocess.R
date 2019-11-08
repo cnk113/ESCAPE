@@ -12,14 +12,16 @@ CellBender = function(h5, cells, total, calls, dim=200, layers=1000, epochs=300)
   count
 }
 
-
-# Run doublet removals tools
-preprocess = function(h5, exp.cells, total.cells, cell.calls, z.dim, z.layers, epochs){
+# Remove ambient RNA, empty droplets, and runs doublet removals tools
+preprocess = function(h5, exp.cells, total.cells, cell.calls, z.dim, z.layers, epochs, fdr=0.01){
   count <- CellBender(h5, cells=exp.cells, total=total.cells, calls=cell.calls, dim=z.dim, layers=z.layers, epochs=epochs)
-  source('doubletdetection.py')
-  pred = doubletdetect(count, exp.cells, cell.calls)
-  DoubletDecon(count)
-  DoubletFinder(count, prop)
+  seuratObj <- QuickCB2(h5file=h5, FDR_threshold=fdr, AsSeurat=T)
+  consensus.barcodes <- intersect(colnames(count), colnames(seuratObj))
+  count <- count[,consensus.barcodes]
+  source('detectDoublets.py') 
+  pred = detectDoublets(count, exp.cells, cell.calls) # Runs scrublet and doubletdetection 
+  pred[[3]] <- DoubletDecon(count)
+  pred[[4]] <- DoubletFinder(count, prop)
   consensus
   count[,consensus]
 }
@@ -45,7 +47,11 @@ DoubletFinder = function(count, prop=0.1){
 
 # Run DoubletDecon
 DoubletDecon = function(count){
-  seuratObject = CreateSeuratObject(count)
+  seuratObject <- CreateSeuratObject(count)
+  seuratObject <- SCTransform(seuratObject)
+  seuratObject <- RunPCA(seuratObject)
+  seuratObject <- FindNeighbors(seuratObject, dims=1:30)
+  seuratObject <- FindClusters(seuratObject, algorithm=4)
   newFiles = Improved_Seurat_Pre_Process(seuratObject, num_genes=50, write_files=FALSE)
   results = Main_Doublet_Decon(rawDataFile=newFiles$newExpressionFile,
                              groupsFile=newFiles$newGroupsFile,
