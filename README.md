@@ -20,8 +20,6 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 # Imputation
 [DrImpute](https://github.com/ikwak2/DrImpute)
 
-[Rmagic](https://github.com/KrishnaswamyLab/MAGIC)
-
 [SAVER](https://github.com/mohuangx/SAVER)
 
 [scImpute](https://github.com/Vivianstats/scImpute)
@@ -32,11 +30,15 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [scHinter](https://github.com/BMILAB/scHinter)
 
+[CIDR](https://github.com/VCCRI/CIDR)
+
 [netSmooth](https://github.com/BIMSBbioinfo/netSmooth)
 
 [scLINE](https://github.com/BMILAB/scLINE)
 
 [BUSseq](https://github.com/songfd2018/BUSseq-1.0)
+
+[scVI](ihttps://github.com/YosefLab/scVI)
 
 [scNPF](https://github.com/BMILAB/scnpf)
 
@@ -71,5 +73,7 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 [VIPER](https://github.com/ChenMengjie/VIPER)
 
 [DCA](https://github.com/theislab/dca) 
+
+[LATE](https://github.com/audreyqyfu/LATE)
 
 [MAGIC](https://github.com/KrishnaswamyLab/MAGIC)
