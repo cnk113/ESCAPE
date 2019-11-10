@@ -10,7 +10,7 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
 Depends: R (>= 3.6)
-Imports: DrImpute, Rmagic, rsvd, SAVER, scImpute, stats, scRMD, abind, future.apply, Seurat,
+Imports: DrImpute, Rmagic, rsvd, SAVER, scImpute, stats, scRMD, abind, future.apply, Seurat
 NeedsCompilation: no
 Packaged: 2019-11-05 10:28:54 UTC; Chang
 Suggests: 

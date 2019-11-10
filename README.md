@@ -38,7 +38,7 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [BUSseq](https://github.com/songfd2018/BUSseq-1.0)
 
-[scVI](ihttps://github.com/YosefLab/scVI)
+[scVI](https://github.com/YosefLab/scVI)
 
 [scNPF](https://github.com/BMILAB/scnpf)
 

@@ -95,7 +95,7 @@ ALRA.EnImpute = function(count, k = 0, q = 10, mkl = F){
 
 
 # Run DCA
-DCA.EnImpute= function(count, normtype = "zheng", type = "zinb-conddisp",
+DCA.Empute= function(count, normtype = "zheng", type = "zinb-conddisp",
                        l2 = 0, l1 = 0, l2enc = 0, l1enc = 0, ridge = 0,
                        gradclip = 5, activation = "relu", hiddensize = "64,32,64",
                        hyper = FALSE, hypern = 1000){
@@ -134,7 +134,7 @@ DCA.EnImpute= function(count, normtype = "zheng", type = "zinb-conddisp",
 
 
 # Run DrImpute
-DrImpute.EnImpute = function(count, ks = 10:15, dists = c("spearman", "pearson"), method = "mean",
+DrImpute.Empute = function(count, ks = 10:15, dists = c("spearman", "pearson"), method = "mean",
                              cls = NULL){
   start.time <- Sys.time()
   # Preprocess gene expression matrix
@@ -158,7 +158,7 @@ DrImpute.EnImpute = function(count, ks = 10:15, dists = c("spearman", "pearson")
 
 
 # Run MAGIC
-MAGIC.EnImpute = function(count, k = 10, alpha = 15, t = "auto", npca = 20,
+MAGIC.Empute = function(count, k = 10, alpha = 15, t = "auto", npca = 20,
                           t.max = 20, knn.dist.method = "euclidean", n.jobs = 1){
   count.t = t(count)
   # Library size normalization
@@ -181,7 +181,7 @@ MAGIC.EnImpute = function(count, k = 10, alpha = 15, t = "auto", npca = 20,
 
 
 # Run SAVER
-SAVER.EnImpute = function(count, do.fast = TRUE, ncores = 1, size.factor = NULL,
+SAVER.Empute = function(count, do.fast = TRUE, ncores = 1, size.factor = NULL,
                           npred = NULL, null.model = FALSE, mu = NULL){
   start.time <- Sys.time()
   # Impute using the function saver
@@ -198,7 +198,7 @@ SAVER.EnImpute = function(count, do.fast = TRUE, ncores = 1, size.factor = NULL,
 
 
 # Run scImpute
-scImpute.EnImpute = function(count, drop_thre = 0.5, Kcluster = 10, labeled = FALSE,
+scImpute.Empute = function(count, drop_thre = 0.5, Kcluster = 10, labeled = FALSE,
                              labels = NULL, genelen = NULL, ncores = 1){
 
   dir.create("./scImpute_result")
@@ -359,17 +359,6 @@ scRMD.EnImpute = function(count, tau = NULL, lambda = NULL, candidate = 0.05){
 #'
 #' @author Xiao-Fei Zhang  <zhangxf@mail.ccnu.edu.cn>
 #'
-#' @references
-#' [1] Linderman, G. C. et al. (2018). Zero-preserving imputation of scrna-seq data using low-rank approximation. bioRxiv.\cr
-#' [2] Eraslan, G. et al. (2019). Single-cell rna-seq denoising using a deep count autoencoder. Nat Commun, 10(1), 390.\cr
-#' [3] Kwak, I.-Y. et al. (2018). Drimpute: Imputing dropout events in single cell rna sequencing data. BMC Bioinformatics, 19, 220.\cr
-#' [4] van Dijk, D. et al. (2018). Recovering gene interactions from single-cell data using data diffusion. Cell, 174, 1–14.\cr
-#' [5] Huang, M. et al. (2018). Saver: gene expression recovery for single-cell rna sequencing. Nat Methods, 15, 539–542.\cr
-#' [6] Li, W. V. and Li, J. J. (2018). An accurate and robust imputation method scimpute for single-cell rna-seq data. Nat Commun, 9(1), 997.\cr
-#' [7] Chen, C. et al. (2018). scrmd: Imputation for single cell rna-seq data via robust matrix decomposition. bioRxiv, page 459404.\cr
-#' [9] Zhang, X. F. et al. EnImpute: imputing dropout events in single cell RNA sequencing data via ensemble learning, 2019.\cr
-#'
-
 Empute = function(count, scale.factor = 10000, trim = 0.3,
                   ALRA = TRUE, DCA = TRUE, DrImpute = TRUE, MAGIC = TRUE, SAVER = TRUE,
                   scImpute = TRUE, scRMD = TRUE, ALRA.k = 0, ALRA.q = 10, ALRA.mkl = TRUE,
