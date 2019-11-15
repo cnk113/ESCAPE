@@ -95,7 +95,7 @@ ALRA.EnImpute = function(count, k = 0, q = 10, mkl = F){
 
 
 # Run DCA
-DCA.Empute= function(count, normtype = "zheng", type = "zinb-conddisp",
+DCA.EnImpute= function(count, normtype = "zheng", type = "zinb-conddisp",
                        l2 = 0, l1 = 0, l2enc = 0, l1enc = 0, ridge = 0,
                        gradclip = 5, activation = "relu", hiddensize = "64,32,64",
                        hyper = FALSE, hypern = 1000){
@@ -134,7 +134,7 @@ DCA.Empute= function(count, normtype = "zheng", type = "zinb-conddisp",
 
 
 # Run DrImpute
-DrImpute.Empute = function(count, ks = 10:15, dists = c("spearman", "pearson"), method = "mean",
+DrImpute.EnImpute = function(count, ks = 10:15, dists = c("spearman", "pearson"), method = "mean",
                              cls = NULL){
   start.time <- Sys.time()
   # Preprocess gene expression matrix
@@ -158,7 +158,7 @@ DrImpute.Empute = function(count, ks = 10:15, dists = c("spearman", "pearson"), 
 
 
 # Run MAGIC
-MAGIC.Empute = function(count, k = 10, alpha = 15, t = "auto", npca = 20,
+MAGIC.EnImpute = function(count, k = 10, alpha = 15, t = "auto", npca = 20,
                           t.max = 20, knn.dist.method = "euclidean", n.jobs = 1){
   count.t = t(count)
   # Library size normalization
@@ -181,7 +181,7 @@ MAGIC.Empute = function(count, k = 10, alpha = 15, t = "auto", npca = 20,
 
 
 # Run SAVER
-SAVER.Empute = function(count, do.fast = TRUE, ncores = 1, size.factor = NULL,
+SAVER.EnImpute = function(count, do.fast = TRUE, ncores = 1, size.factor = NULL,
                           npred = NULL, null.model = FALSE, mu = NULL){
   start.time <- Sys.time()
   # Impute using the function saver
@@ -198,7 +198,7 @@ SAVER.Empute = function(count, do.fast = TRUE, ncores = 1, size.factor = NULL,
 
 
 # Run scImpute
-scImpute.Empute = function(count, drop_thre = 0.5, Kcluster = 10, labeled = FALSE,
+scImpute.EnImpute = function(count, drop_thre = 0.5, Kcluster = 10, labeled = FALSE,
                              labels = NULL, genelen = NULL, ncores = 1){
 
   dir.create("./scImpute_result")
@@ -359,7 +359,7 @@ scRMD.EnImpute = function(count, tau = NULL, lambda = NULL, candidate = 0.05){
 #'
 #' @author Xiao-Fei Zhang  <zhangxf@mail.ccnu.edu.cn>
 #'
-Empute = function(count, scale.factor = 10000, trim = 0.3,
+EnImpute = function(count, scale.factor = 10000, trim = 0.3,
                   ALRA = TRUE, DCA = TRUE, DrImpute = TRUE, MAGIC = TRUE, SAVER = TRUE,
                   scImpute = TRUE, scRMD = TRUE, ALRA.k = 0, ALRA.q = 10, ALRA.mkl = TRUE,
                   DCA.normtype = "zheng", DCA.type = "zinb-conddisp",

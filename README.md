@@ -3,10 +3,12 @@
 ```
 devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 ```
-# Removal of ambient RNA and empty droplets
+# Removal of ambient RNA, empty droplets, and barcode swapping
 [CellBender](https://github.com/broadinstitute/CellBender)
 
 [CB2](https://github.com/zijianni/scCB2)
+
+[EmptyDrops](https://bioconductor.org/packages/devel/bioc/html/DropletUtils.html)
 
 # Doublet removal
 [Scrublet](https://github.com/swolock/scrublet)
@@ -57,6 +59,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 [scRecover](https://github.com/cnk113/scRecover)
 
 [SCRIBE](https://github.com/YiliangTracyZhang/SCRIBE)
+
+[scGAIN](https://www.biorxiv.org/content/biorxiv/early/2019/11/12/837302.full.pdf)
 
 [scDoc](https://github.com/anlingUA/scDoc)
 
