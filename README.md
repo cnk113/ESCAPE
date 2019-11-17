@@ -19,6 +19,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [DoubletDecon](https://github.com/EDePasquale/DoubletDecon)
 
+[Solo](https://github.com/calico/Solo)
+
 # Imputation
 [DrImpute](https://github.com/ikwak2/DrImpute)
 

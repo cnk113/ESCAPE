@@ -38,5 +38,8 @@ RUN cd scScope && python3 setup.py install
 RUN pip3 install dca
 RUN pip3 install scvi
 
+RUN git clone https://github.com/calico/solo.git
+RUN pip3 install -e solo
+
 RUN git clone https://github.com/cnk113/ESCAPE.git
 RUN cd ESCAPE Rscript requirements.R
