@@ -83,3 +83,15 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 [LATE](https://github.com/audreyqyfu/LATE)
 
 [MAGIC](https://github.com/KrishnaswamyLab/MAGIC)
+
+[SigEMD](https://github.com/NabaviLab/SigEMD)
+
+[mcImpute](https://github.com/aanchalMongia/McImpute_scRNAseq)
+
+[DECODE](https://github.com/shmohammadi86/DECODE)
+
+[PBLR](http://page.amss.ac.cn/shihua.zhang/software.html)
+
+[Scedar](https://github.com/logstar/scedar)
+
+[SCINET](https://github.com/shmohammadi86/SCINET)
