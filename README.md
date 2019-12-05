@@ -26,6 +26,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [SAVER](https://github.com/mohuangx/SAVER)
 
+[SAVER-X](https://github.com/jingshuw/SAVERX)
+
 [scImpute](https://github.com/Vivianstats/scImpute)
 
 [scRMD](https://github.com/ChongC1990/scRMD)
@@ -95,3 +97,5 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 [Scedar](https://github.com/logstar/scedar)
 
 [SCINET](https://github.com/shmohammadi86/SCINET)
+
+[WEDGE](https://github.com/QuKunLab/WEDGE)
