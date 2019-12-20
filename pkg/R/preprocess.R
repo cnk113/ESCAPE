@@ -14,22 +14,38 @@ CellBender = function(h5, cells, total, calls, dim=200, layers=1000, epochs=300)
 
 # Remove ambient RNA, empty droplets, and runs doublet removals tools
 preprocess = function(h5, exp.cells, total.cells, cell.calls, z.dim, z.layers, epochs, fdr=0.01){
-  count <- CellBender(h5, cells=exp.cells, total=total.cells, calls=cell.calls, dim=z.dim, layers=z.layers, epochs=epochs)
-  seuratObj <- QuickCB2(h5file=h5, FDR_threshold=fdr, AsSeurat=T)
-  consensus.barcodes <- intersect(colnames(count), colnames(seuratObj))
-  count <- count[,consensus.barcodes]
+  cellBenderCount <- CellBender(h5, cells=exp.cells, total=total.cells, calls=cell.calls, dim=z.dim, layers=z.layers, epochs=epochs)
+  cb2Count <- QuickCB2(h5, FDR_threshold=fdr, AsSeurat=T) # Run CB2
+  seuratObj <- Read10X_h5(h5)
+  emptyDropsCount <- emptyDrops(seuratObj@assays$RNA@counts) # Run EmptyDrops
+  calls <- list(colnames(cellBenderCount), colnames(cb2Count), colnames(emptyDropsCount))
+  consensus.barcodes <- Reduce(intersect, calls)
+  seuratObj <- subset(seuratObj, cells=consensus.barcodes)
+  as.loom(seuratObj, filename="seuratObj.loom")
+  source('loom2h5ad.py')
+  loom2h5ad()
+
+
   source('detectDoublets.py') 
-  pred = detectDoublets(count, exp.cells, cell.calls) # Runs scrublet and doubletdetection 
-  pred[[3]] <- DoubletDecon(count)
-  pred[[4]] <- DoubletFinder(count, prop)
+  pred = detectDoublets(seuratObj@assays$RNA@counts, exp.cells, cell.calls) # Runs scrublet and doubletdetection 
+  pred[[3]] <- DoubletDecon(seuratObj)
+  pred[[4]] <- DoubletFinder(seuratObj, prop)
+  pred[[5]] <- Solo()
   consensus
   count[,consensus]
 }
 
 
+# Run Solo
+Solo = function(h5){
+  command = paste("cellbender remove-background --input", eval(h5),
+		  "--output output.h5",)
+  
+}
+
+
 # Run DoubletFinder
-DoubletFinder = function(count, prop=0.1){
-  seuratObject = CreateSeuratObject(count)
+DoubletFinder = function(seuratObject, prop=0.1){
   seuratObject = SCTransform(seuratObject)
   seuratObject = RunPCA(seuratObject)
   seuratObject = RunUMAP(seuratObject, dims=1:30)
@@ -46,8 +62,7 @@ DoubletFinder = function(count, prop=0.1){
 
 
 # Run DoubletDecon
-DoubletDecon = function(count){
-  seuratObject <- CreateSeuratObject(count)
+DoubletDecon = function(seuratObject){
   seuratObject <- SCTransform(seuratObject)
   seuratObject <- RunPCA(seuratObject)
   seuratObject <- FindNeighbors(seuratObject, dims=1:30)
@@ -69,4 +84,3 @@ DoubletDecon = function(count){
                              num_doubs=100,
                              only50=FALSE,
                              min_uniq=4)
-
