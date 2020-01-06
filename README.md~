@@ -82,8 +82,6 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [VIPER](https://github.com/ChenMengjie/VIPER)
 
-[PRIME](https://github.com/hyundoo/PRIME)
-
 [DCA](https://github.com/theislab/dca) 
 
 [LATE](https://github.com/audreyqyfu/LATE)
