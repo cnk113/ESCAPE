@@ -64,7 +64,7 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [SCRIBE](https://github.com/YiliangTracyZhang/SCRIBE)
 
-[scGAIN](https://www.biorxiv.org/content/biorxiv/early/2019/11/12/837302.full.pdf)
+[scGAIN](https://github.com/mgunady/scGAIN)
 
 [scDoc](https://github.com/anlingUA/scDoc)
 
