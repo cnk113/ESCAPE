@@ -21,6 +21,10 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [DoubletDecon](https://github.com/EDePasquale/DoubletDecon)
 
+[scran](https://bioconductor.org/packages/devel/bioc/html/scran.html)
+
+[scDblFinder](https://github.com/plger/scDblFinder)
+
 [scds](https://github.com/kostkalab/scds)
 
 [Solo](https://github.com/calico/Solo)
