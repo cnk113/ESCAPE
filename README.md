@@ -6,6 +6,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 # Removal of ambient RNA, empty droplets, and barcode swapping
 [CellBender](https://github.com/broadinstitute/CellBender)
 
+[DecontX](https://github.com/campbio/celda)
+
 [CB2](https://github.com/zijianni/scCB2)
 
 [EmptyDrops](https://bioconductor.org/packages/devel/bioc/html/DropletUtils.html)
@@ -18,6 +20,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 [DoubletDetection](https://github.com/JonathanShor/DoubletDetection)
 
 [DoubletDecon](https://github.com/EDePasquale/DoubletDecon)
+
+[scds](https://github.com/kostkalab/scds)
 
 [Solo](https://github.com/calico/Solo)
 
@@ -33,6 +37,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 [scRMD](https://github.com/ChongC1990/scRMD)
 
 [DeepImpute](https://github.com/lanagarmire/deepimpute)
+
+[AutoImpute](https://github.com/divyanshu-talwar/AutoImpute)
 
 [scHinter](https://github.com/BMILAB/scHinter)
 
