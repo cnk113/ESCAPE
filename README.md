@@ -112,6 +112,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [Scedar](https://github.com/logstar/scedar)
 
+[ACTIONet](https://github.com/shmohammadi86/ACTIONet/)
+
 [SCINET](https://github.com/shmohammadi86/SCINET)
 
 [WEDGE](https://github.com/QuKunLab/WEDGE)
