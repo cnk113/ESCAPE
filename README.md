@@ -8,6 +8,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [DecontX](https://github.com/campbio/celda)
 
+[DIEM](https://github.com/marcalva/diem)
+
 [CB2](https://github.com/zijianni/scCB2)
 
 [EmptyDrops](https://bioconductor.org/packages/devel/bioc/html/DropletUtils.html)
