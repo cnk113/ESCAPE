@@ -60,6 +60,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [SIMPLEs](https://github.com/JunLiuLab/SIMPLEs)
 
+[sciGANs](https://github.com/xuyungang/scIGANs)
+
 [scNPF](https://github.com/BMILAB/scnpf)
 
 [I-Impute](https://github.com/xikanfeng2/I-Impute)
