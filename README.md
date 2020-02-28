@@ -84,6 +84,8 @@ devtools::install_github("cnk113/ESCAPE", subdir="pkg")
 
 [scDoc](https://github.com/anlingUA/scDoc)
 
+[SCC](https://github.com/nwpuzhengyan/SCC)
+
 [GraphSCI](https://github.com/GraphSCI/GraphSCI)
 
 [AutoImpute](https://github.com/divyanshu-talwar/AutoImpute)
